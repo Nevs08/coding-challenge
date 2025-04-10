@@ -1,0 +1,83 @@
+<div class="hidden md:block h-dvh w-dvw">
+    <div class="flex flex-row h-full w-dvw font-noto">
+        <div class="bg-white-100  text-black w-full">
+            <div class="flex flex-row h-full">
+                <div class="w-80 p-4 border-r-2 border-gray-200 overflow-y-scroll flex flex-col gap-2">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-col">
+                            <img src="u-rob-logo.svg" alt="U-ROB Logo" class="w-40">
+                            <div class="font-bold text-md my-2">Coding Challenge</div>
+                        </div>
+                        <div class="">
+                            <p-button icon="pi pi-home" aria-label="Home" severity="secondary" (onClick)="goToHome()" />
+                        </div>
+                    </div>
+
+                    <p-panel header="Mission data">
+                        <p class="m-0">
+                            <span class="flex flex-row gap-1.5 items-center">
+                                <i class="pi pi-hourglass" style="font-size: 1rem" pTooltip="Total mission duration" tooltipPosition="right"></i>
+                                {{ this.apiResponse.totalDuration * 1000 | date:'HH':'UTC'}} h {{ this.apiResponse.totalDuration * 1000 | date:'mm':'UTC'}} m {{ this.apiResponse.totalDuration * 1000 | date:'ss':'UTC'}} s
+                            </span>
+                            <span class="flex flex-row gap-1.5 items-center">
+                                <i class="pi pi-map" style="font-size: 1rem" pTooltip="Total mission distance (surveys not included)" tooltipPosition="right"></i>
+                                {{ this.apiResponse.totalDistance / 1000 | number }} km
+                            </span>
+                            <span class="flex flex-row gap-1.5 items-center">
+                                <i class="pi pi-exclamation-triangle" style="font-size: 1rem" pTooltip="Number of points removed from the mission (due to unavailability or other reasons)" tooltipPosition="right"></i>
+                                {{ this.apiResponse.removedPoints.length }}
+                            </span>
+                        </p>
+                    </p-panel>
+
+                    @for (item of this.apiResponse.legs; track item.legIndex) {
+                        <p-panel header=''>
+                            <ng-template #header>
+                                <div class="flex items-center gap-2">
+                                    <p-checkbox [(ngModel)]="legVisible[item.legIndex-1]" (onChange)="toggleLegVisibility(item.legIndex-1)" [binary]="true" />
+                                    Leg {{item.legIndex}}
+                                </div>
+                            </ng-template>
+                            <p class="m-0">
+                                <span class="flex flex-row gap-1.5 items-center">
+                                    <i class="pi pi-hourglass" style="font-size: 1rem" pTooltip="Duration of the leg (Flighttime to every waypoint + survey time + battery charge time)" tooltipPosition="right"></i>
+                                    ~ {{ (item.duration / 60) | number:'0.0-0' }} min
+
+
+
+                                </span>
+                                <span class="flex flex-row gap-1.5 items-center">
+                                    <i class="pi pi-map" style="font-size: 1rem" pTooltip="Flightdistance of the leg (surveys not included)"
+                                        tooltipPosition="right"></i>
+                                    ~ {{ item.distance | number:'0.0-2':'de' }} m
+                                </span>
+                            </p>
+                        </p-panel>
+                    } @empty {
+                        Something went wrong!
+                    }
+                
+                </div>
+
+                <div class="flex-1 flex flex-col items-center">
+                    <div class="h-full w-full">
+                        <div id="map" class="h-full cursor-default" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <div name="selectCords"
+                        class="bg-transparent text-black h-14 flex w-full items-center pl-2">
+                        <p-select [options]="cordsys" [(ngModel)]="this.cordsysSelect" optionLabel="name" class="w-full md:w-56" />
+                        <div class="pl-2">
+                            @if (this.cordsysSelect.code == "wgs") {
+                            {{this.decCoordinateString}}
+                            } @else if (this.cordsysSelect.code == "utm") {
+                            {{this.utmCoordinateString}}
+                            } @else {
+                                {{this.cordsysSelect}}
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,622 @@
+{
+  "success": true,
+  "startPoint": {
+    "name": "Custom startpoint",
+    "lat": 49.12391679677545,
+    "lon": 9.123474667742071
+  },
+  "totalDuration": 58473.379266986296,
+  "totalDistance": 121100.68900479439,
+  "removedPoints": [],
+  "legs": [
+    {
+      "legIndex": 1,
+      "duration": 4333.130059492007,
+      "distance": 6496.950892380106,
+      "returnToHome": {
+        "distance": 3198.607358708824,
+        "flightTime": 213.24049058058827,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 1,
+          "name": "AF",
+          "lat": 49.148674928934085,
+          "lon": 9.141082959356808,
+          "distance": 3036.426818513933,
+          "flightTime": 202.42845456759554,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 2,
+          "name": "U",
+          "lat": 49.14909003086783,
+          "lon": 9.144508724616319,
+          "distance": 253.4024131199279,
+          "flightTime": 16.893494207995193,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 3,
+          "name": "AG",
+          "lat": 49.149159148901845,
+          "lon": 9.144559102222855,
+          "distance": 8.514302037420958,
+          "flightTime": 0.5676201358280638,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 4,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 3198.607358708824,
+          "flightTime": 213.24049058058827,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 2,
+      "duration": 4377.635431820396,
+      "distance": 7164.531477305947,
+      "returnToHome": {
+        "distance": 3480.1642249248403,
+        "flightTime": 232.01094832832268,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 5,
+          "name": "K",
+          "lat": 49.15140805959742,
+          "lon": 9.11119259227225,
+          "distance": 3184.794953269179,
+          "flightTime": 212.3196635512786,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 6,
+          "name": "AC",
+          "lat": 49.15223167318734,
+          "lon": 9.114066090642991,
+          "distance": 228.1692315267354,
+          "flightTime": 15.21128210178236,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 7,
+          "name": "D",
+          "lat": 49.15465706628412,
+          "lon": 9.114484555537352,
+          "distance": 271.4030675851926,
+          "flightTime": 18.093537839012843,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 8,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 3480.1642249248403,
+          "flightTime": 232.01094832832268,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 3,
+      "duration": 4393.354569777299,
+      "distance": 7400.3185466594805,
+      "returnToHome": {
+        "distance": 3624.333288662414,
+        "flightTime": 241.62221924416093,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 9,
+          "name": "N",
+          "lat": 49.15302497886041,
+          "lon": 9.106702672700541,
+          "distance": 3459.0175010230532,
+          "flightTime": 230.60116673487022,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 10,
+          "name": "F",
+          "lat": 49.153990459339035,
+          "lon": 9.108626611081934,
+          "distance": 176.35977100578418,
+          "flightTime": 11.757318067052278,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 11,
+          "name": "E",
+          "lat": 49.15516929497595,
+          "lon": 9.109326207407362,
+          "distance": 140.60798596822912,
+          "flightTime": 9.373865731215274,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 12,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 3624.333288662414,
+          "flightTime": 241.62221924416093,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 4,
+      "duration": 4402.062245333202,
+      "distance": 7530.933679998031,
+      "returnToHome": {
+        "distance": 3672.0769357762483,
+        "flightTime": 244.8051290517499,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 13,
+          "name": "Q",
+          "lat": 49.155179994096024,
+          "lon": 9.130163202510959,
+          "distance": 3510.194767490878,
+          "flightTime": 234.01298449939185,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 14,
+          "name": "R",
+          "lat": 49.156403018884376,
+          "lon": 9.130044405117316,
+          "distance": 136.2682822234631,
+          "flightTime": 9.084552148230873,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 15,
+          "name": "S",
+          "lat": 49.15685028641143,
+          "lon": 9.127204929735491,
+          "distance": 212.39369450744132,
+          "flightTime": 14.159579633829422,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 16,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 3672.0769357762483,
+          "flightTime": 244.8051290517499,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 5,
+      "duration": 4422.1357726260285,
+      "distance": 7832.036589390432,
+      "returnToHome": {
+        "distance": 3885.372098430469,
+        "flightTime": 259.0248065620313,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 17,
+          "name": "Z",
+          "lat": 49.155262195763335,
+          "lon": 9.111839598157387,
+          "distance": 3586.7469161100757,
+          "flightTime": 239.11646107400506,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 18,
+          "name": "AA",
+          "lat": 49.15708655719684,
+          "lon": 9.112598955942877,
+          "distance": 210.24151558490559,
+          "flightTime": 14.016101038993705,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 19,
+          "name": "B",
+          "lat": 49.1582580129513,
+          "lon": 9.113612777241652,
+          "distance": 149.67605926498118,
+          "flightTime": 9.978403950998745,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 20,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 3885.372098430469,
+          "flightTime": 259.0248065620313,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 6,
+      "duration": 4473.1069270764,
+      "distance": 8596.603906146007,
+      "returnToHome": {
+        "distance": 4156.3805698106835,
+        "flightTime": 277.0920379873789,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 21,
+          "name": "AB",
+          "lat": 49.15621041899358,
+          "lon": 9.116235216203407,
+          "distance": 3629.2992264876993,
+          "flightTime": 241.9532817658466,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 22,
+          "name": "A",
+          "lat": 49.15868902252248,
+          "lon": 9.111073073485683,
+          "distance": 465.70001877200195,
+          "flightTime": 31.046667918133462,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 23,
+          "name": "P",
+          "lat": 49.16083281000436,
+          "lon": 9.114507121426795,
+          "distance": 345.22409107562146,
+          "flightTime": 23.01493940504143,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 24,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 4156.3805698106835,
+          "flightTime": 277.0920379873789,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 7,
+      "duration": 4494.273058831704,
+      "distance": 8914.095882475554,
+      "returnToHome": {
+        "distance": 4454.02830689675,
+        "flightTime": 296.93522045978335,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 25,
+          "name": "J",
+          "lat": 49.15672151990184,
+          "lon": 9.102578577943026,
+          "distance": 3951.77101900599,
+          "flightTime": 263.451401267066,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 26,
+          "name": "L",
+          "lat": 49.15810376591443,
+          "lon": 9.101194558118031,
+          "distance": 183.71933618538907,
+          "flightTime": 12.247955745692604,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 27,
+          "name": "AD",
+          "lat": 49.160598906831424,
+          "lon": 9.098878112134182,
+          "distance": 324.5772203874239,
+          "flightTime": 21.63848135916159,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 28,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 4454.02830689675,
+          "flightTime": 296.93522045978335,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 8,
+      "duration": 3894.827606189807,
+      "distance": 8922.414092847102,
+      "returnToHome": {
+        "distance": 4309.437807049395,
+        "flightTime": 287.29585380329297,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 29,
+          "name": "M",
+          "lat": 49.15859491003149,
+          "lon": 9.105722126847857,
+          "distance": 4066.525322579238,
+          "flightTime": 271.1016881719492,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 30,
+          "name": "V",
+          "lat": 49.161852093246424,
+          "lon": 9.111349338661006,
+          "distance": 546.4509632184704,
+          "flightTime": 36.430064214564695,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 31,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 4309.437807049395,
+          "flightTime": 287.29585380329297,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 9,
+      "duration": 4494.763587610736,
+      "distance": 8921.453814161034,
+      "returnToHome": {
+        "distance": 4376.656346127725,
+        "flightTime": 291.77708974184833,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 32,
+          "name": "O",
+          "lat": 49.16081934064581,
+          "lon": 9.126237477734684,
+          "distance": 4108.294210127115,
+          "flightTime": 273.886280675141,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 33,
+          "name": "I",
+          "lat": 49.16234676934804,
+          "lon": 9.127535834121165,
+          "distance": 194.3174895515854,
+          "flightTime": 12.954499303439027,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 34,
+          "name": "H",
+          "lat": 49.16299078778786,
+          "lon": 9.130717656184702,
+          "distance": 242.18576835460888,
+          "flightTime": 16.14571789030726,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 35,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 4376.656346127725,
+          "flightTime": 291.77708974184833,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 10,
+      "duration": 3886.2191696351656,
+      "distance": 8793.287544527484,
+      "returnToHome": {
+        "distance": 4358.931396224878,
+        "flightTime": 290.5954264149919,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 36,
+          "name": "G",
+          "lat": 49.161325322649176,
+          "lon": 9.119387223458544,
+          "distance": 4170.251010021408,
+          "flightTime": 278.01673400142715,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 37,
+          "name": "T",
+          "lat": 49.163102249642655,
+          "lon": 9.121797360485902,
+          "distance": 264.1051382811993,
+          "flightTime": 17.60700921874662,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 38,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 4358.931396224878,
+          "flightTime": 290.5954264149919,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 11,
+      "duration": 3980.7238665614295,
+      "distance": 10210.857998421445,
+      "returnToHome": {
+        "distance": 5070.4410670149455,
+        "flightTime": 338.029404467663,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 39,
+          "name": "W",
+          "lat": 49.157554032917716,
+          "lon": 9.149179896821614,
+          "distance": 4181.663217905335,
+          "flightTime": 278.77754786035564,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 40,
+          "name": "Y",
+          "lat": 49.16616995285402,
+          "lon": 9.149686216773672,
+          "distance": 958.7537135011645,
+          "flightTime": 63.916914233410964,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 41,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 5070.4410670149455,
+          "flightTime": 338.029404467663,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 12,
+      "duration": 4015.5930453198516,
+      "distance": 10733.895679797773,
+      "returnToHome": {
+        "distance": 4933.243493604495,
+        "flightTime": 328.882899573633,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 42,
+          "name": "AE",
+          "lat": 49.163811053224755,
+          "lon": 9.10593373298708,
+          "distance": 4615.886634484647,
+          "flightTime": 307.7257756323098,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 43,
+          "name": "C",
+          "lat": 49.16824669772318,
+          "lon": 9.12074964394748,
+          "distance": 1184.7655517086318,
+          "flightTime": 78.9843701139088,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 44,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 4933.243493604495,
+          "flightTime": 328.882899573633,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 13,
+      "duration": 3943.2311482847836,
+      "distance": 9648.467224271759,
+      "returnToHome": {
+        "distance": 4822.431187568286,
+        "flightTime": 321.4954125045524,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 45,
+          "name": "AI",
+          "lat": 49.157439095330254,
+          "lon": 9.085973027394145,
+          "distance": 4619.1395180909285,
+          "flightTime": 307.9426345393952,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 46,
+          "name": "AH",
+          "lat": 49.15870423514579,
+          "lon": 9.083886758444457,
+          "distance": 206.89651861254396,
+          "flightTime": 13.793101240836263,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 47,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 4822.431187568286,
+          "flightTime": 321.4954125045524,
+          "chargingTime": 2100
+        }
+      ]
+    },
+    {
+      "legIndex": 14,
+      "duration": 3362.3227784274795,
+      "distance": 9934.841676412198,
+      "returnToHome": {
+        "distance": 4967.420838206099,
+        "flightTime": 331.16138921373994,
+        "chargingTime": 2100
+      },
+      "stops": [
+        {
+          "stopIndex": 48,
+          "name": "X",
+          "lat": 49.16652919617441,
+          "lon": 9.143977033255117,
+          "distance": 4967.420838206099,
+          "flightTime": 331.16138921373994,
+          "surveyTime": 600
+        },
+        {
+          "stopIndex": 49,
+          "name": "Dock",
+          "lat": 49.12391679677545,
+          "lon": 9.123474667742071,
+          "distance": 4967.420838206099,
+          "flightTime": 331.16138921373994,
+          "chargingTime": 2100
+        }
+      ]
+    }
+  ]
+}

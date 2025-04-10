@@ -1,0 +1,126 @@
+<div class="h-dvh flex justify-center items-center">
+    <div class="max-w-2xl min-w-2xl max-h-196 rounded overflow-x-hidden overflow-auto shadow-sm border border-gray-50">
+        <div class="px-6 py-4">
+            <img src="u-rob-logo.svg" alt="U-ROB Logo" class="w-52">
+            <div class="font-bold text-xl my-2">Coding Challenge</div>
+            <p class="text-gray-700 text-base">
+                Welcome to the Web-UI for the "U-ROB Coding Challenge".
+                <br>
+                This tool will help you to calculate the best position of the Drone Dock and the best flight route for your mission.
+            </p>
+        </div>
+
+        <p-stepper #stepper [value]="1" [linear]="true" class="mx-2">
+            <p-step-item [value]="1">
+                <p-step>Coordinates</p-step>
+                <p-step-panel>
+                    <ng-template #content>
+                        <div class="flex flex-col h-auto">
+                            <div
+                                class="border-2 border-dashed border-surface-200 rounded bg-white flex-auto flex flex-col p-2 font-medium">
+                                <span class="text-md">
+                                    Upload a file with coordinates or enter your coordinates to the textarea:
+                                </span>
+                                <p-tabs #tab value="0" class="bg-surface-50">
+                                    <p-tablist>
+                                        <p-tab value="0">File Upload</p-tab>
+                                        <p-tab value="1">Text</p-tab>
+                                    </p-tablist>
+                                    <p-tabpanels>
+                                        <p-tabpanel value="0">
+                                            <p class="m-0">
+                                                <span>
+                                                    Upload a Text File (*.txt) with one coordinate per line.
+                                                </span>
+                                                <p-fileupload #fu mode="basic" chooseLabel="Choose"
+                                                    chooseIcon="pi pi-upload" name="files[]" accept="text/*"
+                                                    styleClass="block!" class="block mt-4" />
+                                            </p>
+                                        </p-tabpanel>
+                                        <p-tabpanel value="1">
+                                            <p class="m-0">
+                                                <span>
+                                                    Add one coordinate per line.
+                                                </span>
+                                                <br>
+                                                <textarea rows="5" cols="40" [(ngModel)]="coordinates" (input)="onCoordinatesInput()" pTextarea
+                                                    class="w-full" [class.ng-dirty]="!coordinatesValid" [class.ng-invalid]="!coordinatesValid"
+                                                    placeholder="49.15868902252248, 9.111073073485683&#10;49.1582580129513, 9.113612777241652"></textarea>
+                                            </p>
+                                        </p-tabpanel>
+                                    </p-tabpanels>
+                                </p-tabs>
+                            </div>
+                        </div>
+                        <div class="py-6">
+                            <p-button label="Next" (onClick)="nextStep()" />
+                        </div>
+                    </ng-template>
+                </p-step-panel>
+            </p-step-item>
+
+            <p-step-item [value]="2">
+                <p-step>Settings</p-step>
+                <p-step-panel>
+                    <ng-template #content let-activateCallback="activateCallback">
+                        <div class="flex flex-col h-auto w-full">
+                            <div
+                                class="border-2 border-dashed border-surface-200 rounded bg-white flex-row gap-4 flex p-2 items-start font-medium">
+
+                                <div class="flex flex-col">
+                                    <div class="flex flex-col">
+                                        <label for="dronespeed">Drone flight speed</label>
+                                        <p-inputnumber [(ngModel)]="DRONE_SPEED" inputId="dronespeed" suffix=" m/s" tooltipPosition="right" pTooltip="The speed of the drone in meters per second" />
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <label for="maxflighttime">Maximum flight time</label>
+                                        <p-inputnumber [(ngModel)]="MAX_FLIGHT_TIME" inputId="maxflighttime" suffix=" minutes" tooltipPosition="right" pTooltip="The flight time of the drone until it needs to be back at the dock" />
+                                    </div>
+                                    
+                                    <div class="flex flex-col">
+                                        <label for="chargingtime">Battery charging time</label>
+                                        <p-inputnumber [(ngModel)]="CHARGING_TIME" inputId="chargingtime" suffix=" minutes" tooltipPosition="right" pTooltip="The time the dock needs to recharge the drone (From 0% to 100%) - Currently, this time is always waited, even if the battery is not completely empty!" />
+                                    </div>
+                                    
+                                    <div class="flex flex-col">
+                                        <label for="surveytime">Survey time</label>
+                                        <p-inputnumber [(ngModel)]="SURVEY_TIME" inputId="surveytime" suffix=" minutes" tooltipPosition="right" pTooltip="The time the drone needs to survey a field" />
+                                    </div>
+                                    
+                                    <div class="flex flex-col">
+                                        <label for="missionradius">Mission radius</label>
+                                        <p-inputnumber [(ngModel)]="MISSION_RADIUS" inputId="missionradius" suffix=" meters" tooltipPosition="right" pTooltip="The radius " />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label for="docklocation">Dock location</label>
+                                    <p-selectbutton [options]="stateOptions" [(ngModel)]="mode" optionLabel="label" optionValue="value"
+                                        allowEmpty="false" aria-labelledby="basic" inputId="docklocation" />
+                                    @if (mode ==  "calculate") {
+                                        <span>This automatically calculates the optimal dock location</span>
+                                    } @else if (mode == "setlocation") {
+                                        <span>Here you can set a custom dock location:</span>
+                                        <input type="text" pInputText [(ngModel)]="customDockLocation" (input)="onCustomDockLocationInput()" [class.ng-dirty]="!customdocklocationValid" [class.ng-invalid]="!customdocklocationValid" placeholder="49.15868902252248, 9.111073073485683" />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex py-6 gap-2">
+                            <p-button label="Back" severity="secondary" (onClick)="activateCallback(1)" />
+                            <p-button label="Finish" (onClick)="submitData()" />
+                        </div>
+                    </ng-template>
+                </p-step-panel>
+            </p-step-item>
+        </p-stepper>
+
+        @if (showLoadingAnimation) {
+            <div class="h-24 my-4 flex flex-col justify-center items-center">
+                <p-progress-spinner ariaLabel="loading" [style]="{ width: '50px', height: '50px' }" /> 
+                <span>
+                    Calculate best dock location and flight path...
+                </span>
+            </div>
+        }
+    </div>
+</div>
